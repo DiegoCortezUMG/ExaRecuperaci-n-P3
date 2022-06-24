@@ -12,6 +12,7 @@ import info.deportes.controlador.Clscampeonato;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 import java.io.File;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -144,11 +145,11 @@ public class FrmMantenimientoCampeonatos extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "ID usuario", "nombre"
+                "ID usuario", "nombre", "null"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, false, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -335,6 +336,7 @@ public class FrmMantenimientoCampeonatos extends javax.swing.JInternalFrame {
 
     private void BotonAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAyudaActionPerformed
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "En procesos podrá averiguar todo lo que sucede en el polideportivo.");
     }//GEN-LAST:event_BotonAyudaActionPerformed
 
 

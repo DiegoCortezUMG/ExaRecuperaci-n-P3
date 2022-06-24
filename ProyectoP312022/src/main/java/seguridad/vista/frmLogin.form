@@ -144,7 +144,7 @@
             <StringItem index="0" value="Seleccione:"/>
             <StringItem index="1" value="Campeonatos"/>
             <StringItem index="2" value="Sedes polideportivos"/>
-            <StringItem index="3" value="Deportes"/>
+            <StringItem index="3" value="Partidos"/>
             <StringItem index="4" value="Administraci&#xf3;n"/>
           </StringArray>
         </Property>

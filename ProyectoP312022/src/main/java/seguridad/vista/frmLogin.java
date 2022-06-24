@@ -80,7 +80,7 @@ public class frmLogin extends javax.swing.JFrame {
             }
         });
 
-        cbxAreas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione:", "Campeonatos", "Sedes polideportivos", "Deportes", "Administración" }));
+        cbxAreas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione:", "Campeonatos", "Sedes polideportivos", "Partidos", "Administración" }));
 
         lblArea.setText("Area:");
 
@@ -161,16 +161,12 @@ public class frmLogin extends javax.swing.JFrame {
                 if (txtContraseña.getText().equals(usuarioAConsultar.getUsucontrasena()) && txtUsuario.getText().equals(usuarioAConsultar.getUsunombre())) {
                     JOptionPane.showMessageDialog(null, "Bienvenido al SISTEMA\n", "Mensaje de bienvenida", JOptionPane.INFORMATION_MESSAGE);
 
-                    //mdiGeneral menuGeneral = new mdiGeneral();
-                    //menuGeneral.setVisible(true);
-                    //this.dispose();
-                    //---Agregado para considerar todos los módulos
                     String areaSeleccionada;
                     areaSeleccionada = cbxAreas.getSelectedItem().toString();
 
                     switch (areaSeleccionada) {
 
-                        case "Area Seguridad":
+                        case "Sedes polideportivos":
                              
                         try {
                             mdiGeneral menuSeguridad = new mdiGeneral();
@@ -181,7 +177,7 @@ public class frmLogin extends javax.swing.JFrame {
                             System.out.println(e);
                         }
                         break;
-                        case "Prototipo":
+                        case "Administración":
                         try {
                             mdiAdmin menuPrototipo = new mdiAdmin();
                             menuPrototipo.setVisible(true);
@@ -191,7 +187,7 @@ public class frmLogin extends javax.swing.JFrame {
                             System.out.println(e);
                         }
                         break;
-                        case "Area Compras":       
+                        case "Campeonatos":       
                         try {
                             
                             mdiInfoDeportes menuCompras = new mdiInfoDeportes();
@@ -203,6 +199,7 @@ public class frmLogin extends javax.swing.JFrame {
                         }
                         default:
                             break;
+                            
                     }
                     //---fin agregado
 
@@ -217,10 +214,6 @@ public class frmLogin extends javax.swing.JFrame {
                 txtUsuario.setText("");
             }
         }
-        
-     
-          
-        
     }//GEN-LAST:event_btnAceptarActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

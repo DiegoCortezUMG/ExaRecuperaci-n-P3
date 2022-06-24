@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package info.deportes.vista;
-
+import javax.swing.JOptionPane;
 import seguridad.vista.*;
 import java.awt.Dimension;
 
@@ -40,11 +40,10 @@ public class mdiInfoDeportes extends javax.swing.JFrame {
         jMenu7 = new javax.swing.JMenu();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
         jM_MantenimientopApps = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
-        jMenu6 = new javax.swing.JMenu();
         jMenu8 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -64,15 +63,12 @@ public class mdiInfoDeportes extends javax.swing.JFrame {
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGap(0, 283, Short.MAX_VALUE)
         );
-
-        jMenu1.setText("Archivo");
-        jMenuBar1.add(jMenu1);
 
         jM_MantenimientopApps.setText("Procesos");
 
-        jMenuItem4.setText("Lo que esta pasando en el polideportivo");
+        jMenuItem4.setText("Campeonatos");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
@@ -82,10 +78,16 @@ public class mdiInfoDeportes extends javax.swing.JFrame {
 
         jMenuBar1.add(jM_MantenimientopApps);
 
-        jMenu6.setText("Reportes");
-        jMenuBar1.add(jMenu6);
+        jMenu8.setText("?");
 
-        jMenu8.setText("Ayudas");
+        jMenuItem3.setText("Ayuda");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem3);
+
         jMenuBar1.add(jMenu8);
 
         setJMenuBar(jMenuBar1);
@@ -105,12 +107,17 @@ public class mdiInfoDeportes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        frmMantenimientoPapps ventana2 = new frmMantenimientoPapps();
+        FrmMantenimientoInfo ventana2 = new FrmMantenimientoInfo();
         jDesktopPane1.add(ventana2);
         Dimension desktopSize = jDesktopPane1.getSize();
         Dimension FrameSize = ventana2.getSize();
         ventana2.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2); 
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "En procesos podrá averiguar todo lo que sucede en el polideportivo.");
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,14 +172,13 @@ public class mdiInfoDeportes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jM_MantenimientopApps;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenu jMenu8;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     // End of variables declaration//GEN-END:variables
 }
