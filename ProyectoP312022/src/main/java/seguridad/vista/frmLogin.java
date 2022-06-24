@@ -5,7 +5,6 @@
  */
 package seguridad.vista;
 
-import compras.vista.mdiComprasG2;
 import seguridad.controlador.clsUsuario;
 import java.awt.HeadlessException;
 
@@ -56,7 +55,7 @@ public class frmLogin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("Seguridad del Sistema");
+        jLabel1.setText("Polideportivo: inicio de sesión");
 
         jLabel2.setText("Usuario");
 
