@@ -190,6 +190,8 @@ public class frmLogin extends javax.swing.JFrame {
                         } catch (Exception e) {
                             System.out.println(e);
                         }
+                        
+                        
                         break;
                         case "Area Compras":       
                         try {
