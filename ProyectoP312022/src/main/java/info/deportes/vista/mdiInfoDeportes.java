@@ -14,9 +14,6 @@ import java.awt.Dimension;
  */
 public class mdiInfoDeportes extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MdiGeneral
-     */
     public mdiInfoDeportes() {
         initComponents();
         setLocationRelativeTo(null);
