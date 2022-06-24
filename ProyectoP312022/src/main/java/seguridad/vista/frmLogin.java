@@ -4,14 +4,12 @@
  * and open the template in the editor.
  */
 package seguridad.vista;
-
 import seguridad.controlador.clsUsuario;
 import java.awt.HeadlessException;
-
+import admin.vista.mdiAdmin;
+import info.deportes.vista.mdiInfoDeportes;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
-import prototipos.vista.mdiPrototipo;
-import seguridad.controlador.clsBitacora;
 import seguridad.controlador.clsUsuarioConectado;
 import seguridad.modelo.daoUsuario;
 
@@ -150,9 +148,6 @@ public class frmLogin extends javax.swing.JFrame {
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         // TODO add your handling code here:
-
-        clsBitacora bitacora = new clsBitacora();
-
         if (txtUsuario.getText().trim().isEmpty() || txtContraseña.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "NO PUEDEN HABER CAMPOS VACIOS", "ERROR", JOptionPane.ERROR_MESSAGE);
         } else {
@@ -169,9 +164,6 @@ public class frmLogin extends javax.swing.JFrame {
                     //mdiGeneral menuGeneral = new mdiGeneral();
                     //menuGeneral.setVisible(true);
                     //this.dispose();
-                    clsUsuarioConectado usuarioRegistrado = new clsUsuarioConectado();
-                    usuarioRegistrado.setUsunombre(txtUsuario.getText().trim());
-
                     //---Agregado para considerar todos los módulos
                     String areaSeleccionada;
                     areaSeleccionada = cbxAreas.getSelectedItem().toString();
@@ -191,7 +183,7 @@ public class frmLogin extends javax.swing.JFrame {
                         break;
                         case "Prototipo":
                         try {
-                            mdiPrototipo menuPrototipo = new mdiPrototipo();
+                            mdiAdmin menuPrototipo = new mdiAdmin();
                             menuPrototipo.setVisible(true);
                            
                             this.dispose();
@@ -201,10 +193,8 @@ public class frmLogin extends javax.swing.JFrame {
                         break;
                         case "Area Compras":       
                         try {
-
                             
-
-                            mdiComprasG2 menuCompras = new mdiComprasG2();
+                            mdiInfoDeportes menuCompras = new mdiInfoDeportes();
                             menuCompras.setVisible(true);
                            
                             this.dispose();
