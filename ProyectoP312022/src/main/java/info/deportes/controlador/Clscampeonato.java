@@ -13,6 +13,8 @@ public class Clscampeonato {
     private String nombrecampeonato;
     private int cantidadequipos;
     private int sedepoli;
+ public Clscampeonato() {
+    }    
 
     public int getIdcampeonato() {
         return idcampeonato;
